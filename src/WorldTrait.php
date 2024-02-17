@@ -139,7 +139,7 @@ trait WorldTrait
         $col = \mb_strlen($code) == 3 ? 'code_alpha3' : 'code';
         $world = self::where($col, $code)->first();
         if (is_null($world)) {
-            throw new InvalidCodeException("${code} does not exist");
+            throw new InvalidCodeException("$code does not exist");
         }
         return $world;
     }
